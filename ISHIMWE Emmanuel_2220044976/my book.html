@@ -1,0 +1,217 @@
+<html>
+<head>
+	<title>My Book</title>
+</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<body bgcolor="white">
+    <p>
+    	<center>
+    	<ul style="list-style-type: none;  padding: 0;">
+        <li style="display: inline; background-color:blue; margin-right: 10px"><a href="./home.html">HOME</a></li>
+        <li style="display: inline; background-color:blue; margin-right: 10px"><a href="./about us.html">ABOUT</a></li>
+        <li style="display: inline; background-color:blue; margin-right: 10px"><a href="./contact.html">CONTACT</a></li>
+        <li style="display: inline; background-color:pink; margin-right: 10px"><a href="./services.html">SERVICES</a></li>
+        <li style="display: inline; background-color:blue; margin-right: 10px"><a href="./form.html">FORM</a></li>
+        <li style="display: inline; background-color:blue margin-right: 10px"><a href="./table.html">TABLE</a></li>
+        <li style="display: inline; background-color:pink; margin-right: 10px"><a href="./mybook.html">MYBOOK</a></li>
+    </ul></center>
+
+
+	</p>
+	<h1>THE SOLUTION CAR PARKING RESERVATION SYSTEM</h1>
+	<ol><h2><u><li>DATABASE</li></u></h2>
+
+		<p>Database name used: <b>CAR PARKING RESERVATION SYSTEM.</b></p>
+		<ul type="square"><h3><u><i><li>Tables</li></i></u></h3>
+
+			<ol><li><b>Admin loginform Table</b></li>
+
+			<p>Admin table This is a table that will be only created by admin and will hold other system users apart from admin  will give them email and password that they will use to login and access the project or system, and also used to register if she/he don’t have an account so once you must to create account in order to login and access or use the system.
+            Note: the created Admin will not have same ability and right in the system.</p></br>
+
+			<li><b>Customer Table</b></li>
+
+			<p>Represents individuals who use the parking reservation system.<br>
+Contains information such as name, phone,address and email.
+ </p> </br>
+
+
+			<li><b>Parkinglot Table</b></li>
+
+			<p>Represents the overall parkingslot area or garage where parking spaces are located.
+Contains details about the facility, including its name, address, operating hours, and capacity.</p></br>
+
+			<li><b>parkingslot Table</b></li>
+
+			<p>Represents a physical parking spot within a parkinglot. it include:id, slot_number, size, status </p></br>
+
+            <li><b>registration Table</b></li>
+
+			<p>This will help the customer to provide all detailed information to be kept.it contains:id, name, phone, email, address, username, password, reg date   </p></br>
+
+			<li><b>car Table</b></li>
+
+			<p>the table that show the full information of parked vehicles in the slots.<br>it contains :name, age,model,manufacturer. </p></br>
+
+			<li><b>reservation Table</b></li></ol>
+
+			<p>Represents a booking made by a user to reserve a parking space.<br>
+				Contains information such as the user making the reservation, the parking space being reserved, start and end times, and any associated fees.
+. It has the following attributes: reservation_id, start_time, end_time, cost</p></br>
+
+			
+			              <h3><u><i><li>Attributes</li></i></u></h3>
+			               <b>Attributes of Admin loginTable</b></br>
+    Here are the descriptions or purposes of the attributes/columns used in Admin table:</br>
+ 
+
+    <p><b><i>username(varchar):</i></b> The column which  represents   of user name admin must have as uniqueness</br></p>  
+
+    <p><b><i>password(varchar):</i></b> The column which  represents password of user.</br></p>
+
+
+   <h3><u><i><li>Attributes</li></i></u></h3>
+			               <b>Attributes of customer Table</b></br>
+    Here are the descriptions or purposes of the attributes/columns used in customer table:</br>
+
+    <p><b><i>cid int primary key:</i></b> The columns which represents id of usercustomer.</br></p> 
+    <p><b><i>name(varchar):</i></b> The columns which  represents  name of customer.</br></p> 
+    <p><b><i>phone(varchar):</i></b> The column which  represents telephone number that you contact anytime for a given reason.</br></p>
+
+    <p><b><i>email(varchar):</i></b> The column which  represents or store email .</br></p> 
+
+    
+   <h3><u><i><li>Attributes</li></i></u></h3>
+			               <b>Attributes of reservation Table</b></br>
+    Here are the descriptions or purposes of the attributes/columns used in reservation table:</br>
+
+    <p><b><i>res_id (int)primary key:</i></b> The columns which represents registration id.</br></p> 
+    
+
+    <p><b><i>start_time(date):</i></b> The column which  represents time where booking start.</br></p> 
+
+    <p><b><i>end_time(date):</i></b> The column which  represents   the time the booking  it will expires</br></p>
+    <p><b><i>cost:</i></b> The column which  represents  cost per single slot.</br></p> 
+
+
+
+			              <h3><u><i><li>Attributes</li></i></u></h3>
+			               <b>Attributes of parkinglot Table</b></br>
+    Here are the descriptions or purposes of the attributes/columns used in parkinglot table:</br>
+
+    <p><b><i>pid (int)primary key:</i></b> The columns which represents id as unique of an that was made by a customer .</br></p> 
+
+    <p><b><i>name(varchar):</i></b> The column which  represents name of parkinglot .</br></p>
+
+    <p><b><i>address (varchar):</i></b> The column which  represents the address under which it is located.</br></p>
+    <p><b><i>capacity(int):</i></b> The column which  represents the capacity for lot.</br></p> 
+
+
+
+
+			              <h3><u><i><li>Attributes</li></i></u></h3>
+			               <b>Attributes of parkingslot Table</b></br>
+    Here are the descriptions or purposes of the attributes/columns used in parkingslot table:</br>
+
+    <p><b><i>pid (int) primary key:</i></b> The columns which represents id of parkingslot .</br></p> 
+    <p><b><i>slot_number(int):</i></b> The columns which  represents slot_number.</br></p> 
+
+    <p><b><i>size(int):</i></b> The column which  represents the capacity in size for slot.</br></p>
+
+    <p><b><i>status(varchar):</i></b> The column which  represents status:available/occupied</br></p>  
+
+    <h3><u><i><li>Attributes</li></i></u></h3>
+			               <b>Attributes of registration Table</b></br>
+    Here are the descriptions or purposes of the attributes/columns used in vendor table:</br>
+
+    <p><b><i>rid (int) primary key:</i></b> The columns which represents id of a seller or vendor .</br></p> 
+    <p><b><i>name(varchar):</i></b> The columns which  represents name.</br></p> 
+    <p><b><i>phone(varchar):</i></b> The columns which  represents phone.</br></p> 
+
+    <p><b><i>address(varchar):</i></b> The column which  represents address.</br></p>
+
+    <p><b><i>email(varchar):</i></b> The column which  represents email .</br></p> 
+
+    <p><b><i>username(varchar):</i></b> The column which  represents username</br></p>
+    <p><b><i>password(varchar):</i></b> The column which  represents password</br></p>
+    <p><b><i>reg date(varchar):</i></b> The column which  represents reg date</br></p>
+
+
+
+       <h3><u><i><li>Attributes</li></i></u></h3>
+			               <b>Attributes of car Table</b></br>
+    Here are the descriptions or purposes of the attributes/columns used in car table:</br>
+
+    <p><b><i>name(varchar):</i></b> The column which  represents name of car.</br></p> 
+    <p><b><i>model(varchar):</i></b> The column which  represents the model of car </br></p>
+    <p><b><i>manufacturer(varchar):</i></b> The column which  represents the industry made car </br></p>
+    <p><b><i>age(int):</i></b> The column which  represents age from date of manufacturer.</br></p>  
+
+
+    
+
+</ul>
+		<h2><u><li>JAVA</li></u></h2>
+		
+		<ul type="square"><h3><u><i><li>Description</li></i></u></h3>
+			              
+        </ul>
+
+        <b>Introduction</b><br>
+ <p> 
+In this chapter I will be describing on the way programming language was used to create the analyzed system. Under this chapter I will be showing full detail of how everything will function together with database that have been described above and how it meet with full analyzed system.<br> 
+3.2 Tools used to develop solution car parking reservation system in java programming:<br> 
+Eclipse IDE: an integrated development environment used in computer programming. It contains a base workspace and an extensible plug-in system for customizing the environment. It is the second-most-popular IDE for Java development, and, until 2016, was the most popular.<br> 
+JAR stands for Java Archive. It's a file format based on the popular ZIP file format and is used for aggregating many files into one. Although JAR can be used as a general archiving tool, the primary motivation for its development was so that Java applets and their requisite components. 
+
+
+
+<img src="now.png" width=800 height=150><br><br><br><br><br>
+
+MySQL Connectors. MySQL provides standards-based drivers for JDBC, ODBC, and .Net enabling developers to build database applications in their language 
+3.3 Forms description 
+So let look together how the system will function one by one from the beginning up to the end. 
+.</p><br>
+ 
+	
+			              <h3><u><i><li>Forms and Images</li></i></u></h3>
+
+<b>1.Admin login form</b></br>
+<img src=" admin loginform.png" width=1000 height=400><br><br><br><br><br>
+
+<b>2.login form</b></br>
+<img src="loginform.png" width=1000 height=400><br><br><br><br><br>
+
+<b><i>3.customer Form</i></b></br>
+<img src="customer Form.png" width=1000 height=400><br><br><br><br><br>
+
+<b><i>4.parkinglot form</i></b></br>
+<img src="plot form.png" width=1000 height=400><br><br><br><br><br>
+
+<b><i>5.parkingslot form</i></b></br>
+<img src="pslot form.png" width=1000 height=400><br><br><br><br><br>
+
+<b><i>6.reservation form</i></b></br>
+<img src="res form.png" width=1000 height=400><br><br><br><br><br>
+		
+<b><i>7.registration form</i></b></br>
+<img src="reg form.png" width=1000 height=400><br><br><br><br><br>
+
+<b><i>8.car form</i></b></br>
+<img src="car form.png" width=1000 height=400><br><br><br><br><br>
+<b>conclusion</b><br>
+ <p>
+ By concluding on this chapter related with java especially on my project or system, I can say that the product I expect was full done, so that more information will be shown as image in the description and design that undergo the full appearance, but the much to go on and that need to be improved will be gained from external viewers apart from system developer.
+</p>
+<b>references</b><br> 
+<p> 
+1.	Java Performance: The Definite Guide First Edition (Scott Oaks, 2017) <br>
+2.	www.eclipse.org>windowbuilider <br> 
+3.	www.vogella.com</p>
+	
+	</ol>
+	<marquee><u><i><h2 style="color: blue;">Prepared By</i></u>:   ishimwe emmanuel 222004496</h2></marquee>
+	</body>
+	</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   <p style="margin-top: 200px; color: white;backgrou<!DOCTYPE html>
